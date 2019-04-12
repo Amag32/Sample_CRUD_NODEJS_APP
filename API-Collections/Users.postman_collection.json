@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "81043dbb-1b25-4b60-98d4-18d4a436d030",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"value": "user",
+						"type": "text"
+					},
+					{
+						"key": "method",
+						"value": "create",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fkRole\": \"admin\",\n\t\"fname\": \"Anton\",\n\t\"lname\": \"Lyubushkin\",\n\t\"email\": \"anton.lyubushkin@mail.com\",\n\t\"password\": \"123456\",\n\t\"confirmPassword\": \"123456\",\n\t\"verify\": \"true\",\n\t\"status\": 1\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"type": "text",
+						"value": "user"
+					},
+					{
+						"key": "method",
+						"type": "text",
+						"value": "list"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"search\": {\n\t\t\"name\": \"\",\n\t\t\"email\": \"\",\n\t\t\"fkRole\": \"\",\n\t\t\"verify\": \"true\",\n\t\t\"status\": \"1\"\n\t},\n\t\"limit\": \"10\",\n\t\"page\": \"0\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"type": "text",
+						"value": "user"
+					},
+					{
+						"key": "method",
+						"type": "text",
+						"value": "login"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"anton.lyubushkin@mail.com\",\n\t\"password\": \"123456\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"type": "text",
+						"value": "user"
+					},
+					{
+						"key": "method",
+						"type": "text",
+						"value": "update"
+					},
+					{
+						"key": "_id",
+						"value": "5cb0733c384a6632010169ce",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fkRole\": \"guest\",\n\t\"fname\": \"Claudio\",\n\t\"lname\": \"Albert\",\n\t\"email\": \"claudio.albertin@mail.com\",\n\t\"password\": \"1234567\",\n\t\"confirmPassword\": \"1234567\",\n\t\"verify\": \"true\",\n\t\"status\": 1\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"type": "text",
+						"value": "user"
+					},
+					{
+						"key": "method",
+						"type": "text",
+						"value": "remove"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"_id\": \"5cb0733c384a6632010169ce\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

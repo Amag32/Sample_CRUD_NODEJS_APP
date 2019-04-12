@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "e287ba4f-3771-435d-bc86-b8541a8fcad2",
+		"name": "User Permissions",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"value": "permission",
+						"type": "text"
+					},
+					{
+						"key": "method",
+						"value": "create",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fkRole\": \"5cb06977384a6632010169c6\",\n\t\"module\": \"Category\",\n\t\"list\": \"true\",\n\t\"view\": \"true\",\n\t\"create\": \"false\",\n\t\"update\": \"false\",\n\t\"removed\": \"false\"\n\t\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"type": "text",
+						"value": "permission"
+					},
+					{
+						"key": "method",
+						"type": "text",
+						"value": "list"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"search\": {\n\t\t\"fkRole\": \"\",\n\t\t\"module\": \"\"\n\t},\n\t\"limit\": \"10\",\n\t\"page\": \"0\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"type": "text",
+						"value": "permission"
+					},
+					{
+						"key": "method",
+						"type": "text",
+						"value": "update"
+					},
+					{
+						"key": "_id",
+						"value": "5cb06f01384a6632010169cb",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fkRole\": \"5cb06977384a6632010169c6\",\n\t\"module\": \"Category\",\n\t\"view\": \"false\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "remove",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "service",
+						"type": "text",
+						"value": "permission"
+					},
+					{
+						"key": "method",
+						"type": "text",
+						"value": "remove"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n \"_id\": \"5cb06f01384a6632010169cb\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3500/api/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3500",
+					"path": [
+						"api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
